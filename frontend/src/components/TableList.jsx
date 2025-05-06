@@ -1,38 +1,75 @@
-export default function TableList() {
+export default function TableList({ handleOpen }) {
+  const clients = [
+    {
+      id: 1,
+      name: "Phinneas",
+      email: "phinneas@gmail.com",
+      job: "Software Engineer",
+      isactive: true,
+    },
+    {
+      id: 2,
+      name: "Ferb",
+      email: "ferb@gmail.com",
+      job: "Technical Consultant",
+      isactive: true,
+    },
+    {
+      id: 3,
+      name: "Dr Doofensmirtz",
+      email: "evil@gmail.com",
+      job: "Villain",
+      isactive: false,
+    },
+    {
+      id: 4,
+      name: "Perry the Platypus",
+      email: "agentp@gmail.com",
+      job: "Agent",
+      isactive: true,
+    },
+  ];
+
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto mt-10">
       <table className="table">
         {/* head */}
         <thead>
-          <tr>
-            <th></th>
-            <th>Name</th>
-            <th>Job</th>
-            <th>Favorite Color</th>
-          </tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Job</th>
+          <th>Status</th>
         </thead>
-        <tbody className="hover:bg-base-300">
-          {/* row 1 */}
-          <tr>
-            <th>1</th>
-            <td>Cy Ganderton</td>
-            <td>Quality Control Specialist</td>
-            <td>Blue</td>
-          </tr>
-          {/* row 2 */}
-          <tr>
-            <th>2</th>
-            <td>Hart Hagerty</td>
-            <td>Desktop Support Technician</td>
-            <td>Purple</td>
-          </tr>
-          {/* row 3 */}
-          <tr>
-            <th>3</th>
-            <td>Brice Swyre</td>
-            <td>Tax Accountant</td>
-            <td>Red</td>
-          </tr>
+        <tbody className="">
+          {clients.map((client) => (
+            <tr>
+              <th>{client.id}</th>
+              <th>{client.name}</th>
+              <th>{client.email}</th>
+              <th>{client.job}</th>
+              <td>
+                <button
+                  className={`btn rounded-full w-20 ${
+                    client.isactive ? `btn-primary` : `btn-outline btn-primary`
+                  }`}
+                >
+                  {client.isactive ? `Active` : `Inactive`}
+                </button>
+              </td>
+              <td>
+                <button
+                  onClick={() => handleOpen("edit")}
+                  className="btn btn-secondary"
+                >
+                  Update
+                </button>
+              </td>
+              <td>
+                <button className="btn btn-warning">Delete</button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
