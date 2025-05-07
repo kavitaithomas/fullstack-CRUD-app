@@ -3,30 +3,30 @@ export default function TableList({ handleOpen }) {
     {
       id: 1,
       name: "Phinneas",
-      email: "phinneas@gmail.com",
+      contact: "phinneas@gmail.com",
       job: "Software Engineer",
-      isactive: true,
+      company: "Backyard Bros",
     },
     {
       id: 2,
       name: "Ferb",
-      email: "ferb@gmail.com",
+      contact: "ferb@gmail.com",
       job: "Technical Consultant",
-      isactive: true,
+      company: "Backyard Bros",
     },
     {
       id: 3,
       name: "Dr Doofensmirtz",
-      email: "evil@gmail.com",
+      contact: "evil@gmail.com",
       job: "Villain",
-      isactive: false,
+      company: "Doofensmirtz Evil Inc",
     },
     {
       id: 4,
       name: "Perry the Platypus",
-      email: "agentp@gmail.com",
+      contact: "agentp@gmail.com",
+      company: "The OWCA",
       job: "Agent",
-      isactive: true,
     },
   ];
 
@@ -37,26 +37,18 @@ export default function TableList({ handleOpen }) {
         <thead>
           <th>ID</th>
           <th>Name</th>
-          <th>Email</th>
+          <th>Contact</th>
+          <th>Company</th>
           <th>Job</th>
-          <th>Status</th>
         </thead>
         <tbody className="">
           {clients.map((client) => (
             <tr>
               <th>{client.id}</th>
               <th>{client.name}</th>
-              <th>{client.email}</th>
+              <th>{client.contact}</th>
+              <th>{client.company}</th>
               <th>{client.job}</th>
-              <td>
-                <button
-                  className={`btn rounded-full w-20 ${
-                    client.isactive ? `btn-primary` : `btn-outline btn-primary`
-                  }`}
-                >
-                  {client.isactive ? `Active` : `Inactive`}
-                </button>
-              </td>
               <td>
                 <button
                   onClick={() => handleOpen("edit")}
