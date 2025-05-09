@@ -99,10 +99,9 @@ export default function TableList({ handleOpen }) {
   ];
 
   return (
-    <div className="overflow-auto max-h-[90vh]">
+    <div className="flex-grow overflow-auto">
       <table className="table table-zebra w-full">
-        {/* head */}
-        <thead className="text-lg sticky top-0 z-40 bg-base-100">
+        <thead className="sticky top-0 z-40 bg-base-100 text-lg">
           <tr>
             <th>ID</th>
             <th>Name</th>
@@ -113,20 +112,20 @@ export default function TableList({ handleOpen }) {
             <th colSpan={2}></th>
           </tr>
         </thead>
-        <tbody className="">
+        <tbody className="flex-grow overflow-auto">
           {clients.map((client) => (
-            <tr>
-              <th>{client.id}</th>
-              <th>{client.name}</th>
-              <th>{client.contact}</th>
-              <th>{client.company}</th>
-              <th>{client.position}</th>
-              <th>{client.date}</th>
+            <tr key={client.id}>
+              <td>{client.id}</td>
+              <td>{client.name}</td>
+              <td>{client.contact}</td>
+              <td>{client.company}</td>
+              <td>{client.position}</td>
+              <td>{client.date}</td>
               <div className="flex flex-row justify-end">
                 <td className="flex justify-end">
                   <button
                     onClick={() => handleOpen("edit")}
-                    className="btn btn-secondary "
+                    className="btn btn-secondary"
                   >
                     Update
                   </button>
