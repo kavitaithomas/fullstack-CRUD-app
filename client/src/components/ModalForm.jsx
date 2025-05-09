@@ -17,42 +17,52 @@ export default function ModalForm({ isOpen, onClose, mode, onSubmit }) {
             <h3 className="font-bold text-lg text-center">
               {mode === "edit" ? "Edit Client" : "Client Details"}
             </h3>
+            {/* Edit Data */}
             <form method="dialog">
-              <div className="flex flex-row gap-x-4">
-                <label className="input outline-1">
-                  Name
-                  <input
-                    type="text"
-                    className="grow"
-                    placeholder="Enter Name"
-                  />
-                </label>
-                <label className="input outline-1">
-                  Contact
-                  <input
-                    type="text"
-                    className="grow"
-                    placeholder="Enter Contact"
-                  />
-                </label>
-                <label className="input outline-1">
-                  Company
-                  <input
-                    type="text"
-                    className="grow"
-                    placeholder="Enter Company"
-                  />
-                </label>
-                <label className="input outline-1">
-                  Position
-                  <input
-                    type="text"
-                    className="grow "
-                    placeholder="Enter Position"
-                  />
-                </label>
+              <div className="flex flex-col gap-y-4">
+                <div className="flex flex-row gap-x-4 justify-between w-full">
+                  <label className="input outline-1 w-1/2">
+                    Name
+                    <input
+                      type="text"
+                      className="w-full"
+                      placeholder="Enter Name"
+                    />
+                  </label>
+                  <label className="input outline-1 w-1/2">
+                    Contact
+                    <input
+                      type="text"
+                      className="w-full"
+                      placeholder="Enter Contact"
+                    />
+                  </label>
+                </div>
+                <div className="flex flex-row gap-x-4">
+                  <label className="input outline-1">
+                    Company
+                    <input
+                      type="text"
+                      className="grow"
+                      placeholder="Enter Company"
+                    />
+                  </label>
+                  <label className="input outline-1">
+                    Position
+                    <input
+                      type="text"
+                      className="grow "
+                      placeholder="Enter Position"
+                    />
+                  </label>
+                  <label className="input outline-1">
+                    Date
+                    <input type="date" className="input" />
+                  </label>
+                </div>
               </div>
             </form>
+            {/* Edit Notes */}
             <div className="">
               <textarea
                 className="textarea w-full h-72 outline-1"
