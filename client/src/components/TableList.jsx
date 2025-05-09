@@ -32,7 +32,7 @@ export default function TableList({ handleOpen }) {
 
   return (
     <div className="overflow-x-auto mt-10">
-      <table className="table">
+      <table className="table table-zebra">
         {/* head */}
         <thead>
           <th>ID</th>
