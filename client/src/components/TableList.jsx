@@ -6,6 +6,7 @@ export default function TableList({ handleOpen }) {
       contact: "phinneas@gmail.com",
       position: "Software Engineer",
       company: "Backyard Bros",
+      date: "yyyy-mm-dd",
     },
     {
       id: 2,
@@ -13,6 +14,7 @@ export default function TableList({ handleOpen }) {
       contact: "ferb@gmail.com",
       position: "Technical Consultant",
       company: "Backyard Bros",
+      date: "yyyy-mm-dd",
     },
     {
       id: 3,
@@ -20,6 +22,7 @@ export default function TableList({ handleOpen }) {
       contact: "evil@gmail.com",
       position: "Villain",
       company: "Doofensmirtz Evil Inc",
+      date: "yyyy-mm-dd",
     },
     {
       id: 4,
@@ -27,6 +30,7 @@ export default function TableList({ handleOpen }) {
       contact: "agentp@gmail.com",
       company: "The OWCA",
       position: "Agent",
+      date: "yyyy-mm-dd",
     },
     {
       id: 1,
@@ -34,6 +38,7 @@ export default function TableList({ handleOpen }) {
       contact: "phinneas@gmail.com",
       position: "Software Engineer",
       company: "Backyard Bros",
+      date: "yyyy-mm-dd",
     },
     {
       id: 2,
@@ -41,6 +46,7 @@ export default function TableList({ handleOpen }) {
       contact: "ferb@gmail.com",
       position: "Technical Consultant",
       company: "Backyard Bros",
+      date: "yyyy-mm-dd",
     },
     {
       id: 3,
@@ -48,6 +54,7 @@ export default function TableList({ handleOpen }) {
       contact: "evil@gmail.com",
       position: "Villain",
       company: "Doofensmirtz Evil Inc",
+      date: "yyyy-mm-dd",
     },
     {
       id: 4,
@@ -55,6 +62,7 @@ export default function TableList({ handleOpen }) {
       contact: "agentp@gmail.com",
       company: "The OWCA",
       position: "Agent",
+      date: "yyyy-mm-dd",
     },
     {
       id: 1,
@@ -62,6 +70,7 @@ export default function TableList({ handleOpen }) {
       contact: "phinneas@gmail.com",
       position: "Software Engineer",
       company: "Backyard Bros",
+      date: "yyyy-mm-dd",
     },
     {
       id: 2,
@@ -69,6 +78,7 @@ export default function TableList({ handleOpen }) {
       contact: "ferb@gmail.com",
       position: "Technical Consultant",
       company: "Backyard Bros",
+      date: "yyyy-mm-dd",
     },
     {
       id: 3,
@@ -76,6 +86,7 @@ export default function TableList({ handleOpen }) {
       contact: "evil@gmail.com",
       position: "Villain",
       company: "Doofensmirtz Evil Inc",
+      date: "yyyy-mm-dd",
     },
     {
       id: 4,
@@ -83,19 +94,24 @@ export default function TableList({ handleOpen }) {
       contact: "agentp@gmail.com",
       company: "The OWCA",
       position: "Agent",
+      date: "yyyy-mm-dd",
     },
   ];
 
   return (
-    <div className="overflow-x-auto">
-      <table className="table table-zebra">
+    <div className="overflow-auto max-h-[90vh]">
+      <table className="table table-zebra w-full">
         {/* head */}
-        <thead>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Contact</th>
-          <th>Company</th>
-          <th>Position</th>
+        <thead className="text-lg sticky top-0 z-40 bg-base-100">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Company</th>
+            <th>Position</th>
+            <th>Date</th>
+            <th colSpan={2}></th>
+          </tr>
         </thead>
         <tbody className="">
           {clients.map((client) => (
@@ -105,6 +121,7 @@ export default function TableList({ handleOpen }) {
               <th>{client.contact}</th>
               <th>{client.company}</th>
               <th>{client.position}</th>
+              <th>{client.date}</th>
               <div className="flex flex-row justify-end">
                 <td className="flex justify-end">
                   <button

@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <div className="">
+    <div className="bg-base-100">
       <NavBar onOpen={() => handleOpen("add")} />
       <TableList handleOpen={handleOpen} />
       <ModalForm
