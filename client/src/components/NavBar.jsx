@@ -9,7 +9,7 @@ export default function NavBar({ onOpen }) {
         <input
           type="text"
           placeholder="Search"
-          className="input input-bordered w-48 md:w-auto"
+          className="input input-bordered w-96 border-purple-"
         />
       </div>
       <div className="navbar-end">
