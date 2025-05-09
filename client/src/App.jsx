@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="">
       <NavBar onOpen={() => handleOpen("add")} />
       <TableList handleOpen={handleOpen} />
       <ModalForm
@@ -32,7 +32,7 @@ function App() {
         onClose={() => setIsOpen(false)}
         mode={modalMode}
       />
-    </>
+    </div>
   );
 }
 

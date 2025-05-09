@@ -44,11 +44,11 @@ export default function ModalForm({ isOpen, onClose, mode, onSubmit }) {
                   />
                 </label>
                 <label className="input outline-1">
-                  Job
+                  Position
                   <input
                     type="text"
                     className="grow "
-                    placeholder="Enter Job"
+                    placeholder="Enter Position"
                   />
                 </label>
               </div>
