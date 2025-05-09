@@ -2,12 +2,12 @@ export default function ModalForm({ isOpen, onClose, mode, onSubmit }) {
   return (
     <>
       <dialog id="my_modal_3" className="modal" open={isOpen}>
-        <div className="w-[90vw] h-[90vh] max-w-none p-4 bg-dark rounded-2xl overflow-y-auto">
+        <div className="w-[90vw] h-[90vh] max-w-none p-4 bg-purple rounded-2xl overflow-y-auto">
           <h3 className="font-bold text-lg py-4">
             {mode === "edit" ? "Edit Client" : "Client Details"}
           </h3>
 
-          <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-4 m-10">
             {" "}
             <form method="dialog">
               <div className="flex flex-row gap-x-4">
@@ -16,7 +16,7 @@ export default function ModalForm({ isOpen, onClose, mode, onSubmit }) {
                   <input type="text" className="grow" placeholder="Type Here" />
                 </label>
                 <label className="input">
-                  Email
+                  Contact
                   <input type="text" className="grow" placeholder="Type Here" />
                 </label>
                 <label className="input">
@@ -28,7 +28,7 @@ export default function ModalForm({ isOpen, onClose, mode, onSubmit }) {
                   <input type="text" className="grow" placeholder="Type Here" />
                 </label>
                 <button
-                  className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 "
+                  className="btn btn-sm btn-circle btn-ghost absolute justify-center top-12 right-20"
                   onClick={onClose}
                 >
                   ✕
@@ -37,7 +37,7 @@ export default function ModalForm({ isOpen, onClose, mode, onSubmit }) {
             </form>
             <div className="">
               <textarea
-                className="textarea w-full"
+                className="textarea w-full h-72"
                 placeholder="Notes"
               ></textarea>
             </div>
