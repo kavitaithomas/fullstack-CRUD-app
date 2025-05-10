@@ -1,16 +1,16 @@
-## Dependencies
+# Dependencies
 
-# Express
+### Express
 
 for http server
 npm install express
 
-# Dotenv
+### Dotenv
 
 for environment variable management
 npm install dotenv
 
-# nodemon
+### nodemon
 
 for automatic server restarts in dev
 npm install --save-dev nodemon
@@ -20,4 +20,3 @@ nodemon index.js
 
 To run locally:
 npx nodemon
-
