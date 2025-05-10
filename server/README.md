@@ -19,4 +19,4 @@ To run globally:
 nodemon index.js
 
 To run locally:
-npx nodemon
+npx nodemon src/index.js
