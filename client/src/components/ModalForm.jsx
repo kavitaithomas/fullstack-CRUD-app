@@ -18,7 +18,7 @@ export default function ModalForm({ isOpen, onClose, mode, onSubmit }) {
   return (
     <>
       <dialog id="my_modal_3" className="modal" open={isOpen}>
-        <div className="w-4xl h-3xl max-w-none p-4 bg-purple outline-1 rounded-2xl overflow-y-auto">
+        <div className="w-4xl h-3xl max-w-none p-4 bg-base-100 outline-1 rounded-2xl overflow-y-auto">
           {/* Close Modal*/}
           <div className="flex justify-end h-10">
             <button
